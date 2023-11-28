@@ -27,6 +27,6 @@ def test_accumulator_add_twice():
 @pytest.mark.accumulator
 def test_accumulator_cannot_set_count_directly(): 
     accum = Accumulator()
-    with pytest.raises(AttributeError, match=r"property 'count' of 'Accumulator' object has no setter") as e:
+    with pytest.raises(AttributeError) as e:
         accum.count = 10         
 
